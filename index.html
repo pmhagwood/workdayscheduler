@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Work Day Scheduler</title>
+  </head>
+
+  <body>
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+    </header>
+    <div class="container">
+      <!-- Timeblocks go here -->
+      <!-- Row 1 -->
+      <div id="calrow1" class="row">
+        <div id="hour1" class="col-md-1 hour">
+          <p class="time-block">8 AM</p>
+        </div>
+        <textarea id="text-block8" class="col-md-10">
+
+        </textarea>
+        <button id="save" class="col-md-1 saveBtn">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+
+      <!-- Row 2 -->
+      <div id="calrow2" class="row">
+        <div id="hour2" class="col-md-1 hour">
+          <p class="time-block">9 AM</p>
+        </div>
+        <textarea id="text-block9" class="col-md-10">
+
+        </textarea>
+        <button id="save" class="col-md-1 saveBtn"><i class="fas fa-save"></i></button>
+      </div>
+
+      <!-- Row 3 -->
+      <div id="calrow3" class="row">
+        <div id="hour3" class="col-md-1 hour">
+          <p class="time-block">10 AM</p>
+        </div>
+        <textarea id="text-block10" class="col-md-10">
+
+        </textarea>
+        <button id="save" class="col-md-1 saveBtn"><i class="fas fa-save"></i></button>
+      </div>
+
+      <!-- Row 4 -->
+      <div id="calrow4" class="row">
+        <div id="hour4" class="col-md-1 hour">
+          <p class="time-block">11 AM</p>
+        </div>
+        <textarea id="text-block11" class="col-md-10">
+
+        </textarea>
+        <button id="save" class="col-md-1 saveBtn"><i class="fas fa-save"></i></button>
+      </div>
+
+      <!-- Row 5 -->
+      <div id="calrow5" class="row">
+        <div id="hour5" class="col-md-1 hour">
+          <p class="time-block">12 PM</p>
+        </div>
+        <textarea id="text-block12" class="col-md-10">
+
+        </textarea>
+        <button id="save" class="col-md-1 saveBtn"><i class="fas fa-save"></i></button>
+      </div>
+      
+      <!-- Row 6 -->
+      <div id="calrow6" class="row">
+        <div id="hour6" class="col-md-1 hour">
+          <p class="time-block">1 PM</p>
+        </div>
+        <textarea id="text-block13" class="col-md-10">
+
+        </textarea>
+        <button id="save" class="col-md-1 saveBtn">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+
+      <!-- Row 7 -->
+      <div id="calrow7" class="row">
+        <div id="hour7" class="col-md-1 hour">
+          <p class="time-block">2 PM</p>
+        </div>
+        <textarea id="text-block14" class="col-md-10">
+
+        </textarea>
+        <button id="save" class="col-md-1 saveBtn">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+
+      <!-- Row 8 -->
+      <div id="calrow8" class="row">
+        <div id="hour8" class="col-md-1 hour">
+          <p class="time-block">3 PM</p>
+        </div>
+        <textarea id="text-block15" class="col-md-10">
+
+        </textarea>
+        <button id="save" class="col-md-1 saveBtn">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+
+      <!-- Row 9 -->
+      <div id="calrow9" class="row">
+        <div id="hour9" class="col-md-1 hour">
+          <p class="time-block">4 PM</p>
+        </div>
+        <textarea id="text-block16" class="col-md-10">
+
+        </textarea>
+        <button id="save" class="col-md-1 saveBtn">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+
+      <!-- Row 10 -->
+      <div id="calrow10" class="row">
+        <div id="hour10" class="col-md-1 hour">
+          <p class="time-block">5 PM</p>
+        </div>
+        <textarea id="text-block17" class="col-md-10">
+
+        </textarea>
+        <button id="save" class="col-md-1 saveBtn">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+
+
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="styles.js"></script>
+  </body>
+</html>
