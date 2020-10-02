@@ -82,6 +82,13 @@ $('button').click(function() {
     textEntered = $(this).siblings('textarea').val();
     console.log("text entered is ", textEntered);
     $(this).css("background-color", "gray");
+    $(this).append('<span class="savedtxt"> saved</span>');
+    $('.savedtxt').fadeOut(1000);
+    // setTimeout(function(){
+    //     // $('#savedtxt').remove();
+        
+        
+    //    }, 1000);
 
     // save the hour and the text the user entered
     saveSchedule(hourEntered, textEntered);
