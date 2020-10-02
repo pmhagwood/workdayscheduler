@@ -81,6 +81,7 @@ $('button').click(function() {
     // get the text the user entered
     textEntered = $(this).siblings('textarea').val();
     console.log("text entered is ", textEntered);
+    $(this).css("background-color", "gray");
 
     // save the hour and the text the user entered
     saveSchedule(hourEntered, textEntered);
@@ -113,7 +114,7 @@ function saveSchedule (hour, text){
 
 // Set the tasks on the Calendar 
 function setCalendarTasks(obj) {
-    
+    console.log('this is running');
 }
 
 // End Document ready
