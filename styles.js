@@ -83,6 +83,7 @@ $('button').click(function() {
     console.log("text entered is ", textEntered);
     $(this).css("background-color", "gray");
     $(this).append('<span class="savedtxt"> saved</span>');
+    $(this).siblings('textarea').css('opacity', '0.8');
     $('.savedtxt').fadeOut(1000);
     // setTimeout(function(){
     //     // $('#savedtxt').remove();
