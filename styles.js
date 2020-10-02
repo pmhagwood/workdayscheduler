@@ -48,6 +48,12 @@ $(document).ready(function(){
 // Set the Date at the top
 $('#currentDay').text(day + ', ' + month + ' ' + dayOf);
 
+if(!localStorage.getItem('workdayTasks')) {
+    setCalendarTasks(workdayTasks);
+} else {
+    setCalendarTasks(JSON.parse(localStorage.getItem('workdayTasks')));
+};
+
 // get the values of workday
 var objectKeys = Object.keys(workHours);
 console.log('workday object is ', objectKeys);
@@ -81,14 +87,15 @@ $('button').click(function() {
 });
 
 //   Put object into localstorage
-// function initializeLocalStorage (){
-//     localStorage.setItem('workdayTasks', JSON.stringify(workdayTasks));
-// }
+function initializeLocalStorage (){
+    localStorage.setItem('workdayTasks', JSON.stringify(workdayTasks));
+}
 
 // send object to localStorage
-// function saveToLocalStorage(obj) {
-//     localStorage.setItem('workdayTasks', JSON.stringify(obj));
-// }
+function saveToLocalStorage(obj) {
+    localStorage.setItem('workdayTasks', JSON.stringify(obj));
+    console.log('local storage now contains ', workdayTasks);
+}
 
 // function to save the schedule
 function saveSchedule (hour, text){
@@ -102,6 +109,11 @@ function saveSchedule (hour, text){
 
     saveToLocalStorage(workText);
 
+}
+
+// Set the tasks on the Calendar 
+function setCalendarTasks(obj) {
+    
 }
 
 // End Document ready
