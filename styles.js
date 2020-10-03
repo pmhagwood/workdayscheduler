@@ -56,14 +56,14 @@ if(!localStorage.getItem('workdayTasks')) {
 
 // get the values of workday
 var objectKeys = Object.keys(workHours);
-console.log('workday object is ', objectKeys);
+// console.log('workday object is ', objectKeys);
 // loop through and add classes to the html
 for (property in workHours) {
     // console.log(`key = ${property} value = ${workDay[property]}`)
     timeNumber = workHours[property];
-    console.log(timeNumber);
+    // console.log(timeNumber);
     textBlock = "#text-block" + timeNumber;
-    console.log(textBlock);
+    // console.log(textBlock);
     if(timeNumber < presentHour) {
         $(textBlock).addClass("past");
       } else if (timeNumber > presentHour) {
@@ -77,10 +77,10 @@ for (property in workHours) {
 $('button').click(function() {
     // get the hour text
     hourEntered = $(this).siblings('.hour').text();
-    console.log("Hour entered is ", hourEntered);
+    // console.log("Hour entered is ", hourEntered);
     // get the text the user entered
     textEntered = $(this).siblings('textarea').val();
-    console.log("text entered is ", textEntered);
+    // console.log("text entered is ", textEntered);
     $(this).css("background-color", "gray");
     $(this).append('<span class="savedtxt"> saved</span>');
     $(this).siblings('textarea').css('opacity', '0.8');
@@ -103,7 +103,7 @@ function initializeLocalStorage (){
 // send object to localStorage
 function saveToLocalStorage(obj) {
     localStorage.setItem('workdayTasks', JSON.stringify(obj));
-    console.log('local storage now contains ', workdayTasks);
+    // console.log('local storage now contains ', workdayTasks);
 }
 
 // function to save the schedule
@@ -114,7 +114,7 @@ function saveSchedule (hour, text){
 
     var workText = JSON.parse(localStorage.getItem('workdayTasks'));
     workText[hour] = text;
-    console.log('workText is ', workText);
+    // console.log('workText is ', workText);
 
     saveToLocalStorage(workText);
 
@@ -122,7 +122,22 @@ function saveSchedule (hour, text){
 
 // Set the tasks on the Calendar 
 function setCalendarTasks(obj) {
-    console.log('this is running');
+    var i=8
+    $('.time-block').each(function (){
+        console.log( obj + ": " + $(this).text() );
+        var hourBlock = $(this).text();
+        console.log('The hour block is ', hourBlock);
+        
+       if(hourBlock === $(this).text()){
+      //obj.property - no space you can do .
+      //obj[property] - with space in the property
+            console.log($(this).text(),obj,hourBlock)
+            $('#text-block' + i++).val(obj[hourBlock]);
+        }
+      
+
+    
+    });
 }
 
 // End Document ready
