@@ -81,7 +81,7 @@ $('button').click(function() {
     // get the text the user entered
     textEntered = $(this).siblings('textarea').val();
     // console.log("text entered is ", textEntered);
-    $(this).css("background-color", "gray");
+    $(this).css("background", "#9ca2b9");
     $(this).append('<span class="savedtxt"> saved</span>');
     $(this).siblings('textarea').css('opacity', '0.8');
     $('.savedtxt').fadeOut(1000);

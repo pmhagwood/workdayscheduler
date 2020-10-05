@@ -2,23 +2,55 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-color: #373c4f;
 }
 
 textarea{
+  font-family: 'Raleway', sans-serif;
   background: transparent;
   border: none;
   resize: none;
-  color: #000000;
-  border-left: 1px solid black;
+  color: #3e324d;
+  border-left: 1px solid #d0c4e1;
   padding: 10px;
 }
 
+.container {
+  background-color: #f9f9f9;
+  padding: 0px 0px 25px 15px;
+  border-radius: 2em;
+}
+
+.day {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 30px 0px 60px 0px;
+  color: #846aa7;
+}
+
 .jumbotron {
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
   background-color: transparent;
-  color: black;
+  color: #f9f9f9;
   border-radius: 0;
-  border-bottom: 10px solid black;
+  /* border-bottom: 10px solid black; */
+}
+
+.lead {
+  color:#b587e0;
+}
+
+.fa-circle {
+  font-size:6px;
+  vertical-align: middle;
+  margin: 0px 5%;
+  color: #846aa7;
+}
+
+.display-3 {
+  font-weight: lighter;
 }
 
 .description{
@@ -26,44 +58,56 @@ textarea{
 }
 
 .time-block{
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
   text-align: center;
   border-radius: 15px;
+  color:#846aa7;
+  margin-left: -20px;
 }
+
+/* .time-block::first-letter {
+  font-size:3em;
+} */
+
 
 .row {
   white-space: pre-wrap;
   height: 90px;
-  border-top: 1px solid white;;
+  /* border-top: 1px solid white;; */
+  margin-top: 1px;
 }
 
 .hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
+  /* background-color: #ffffff; */
+  /* color: #000000; */
+  border-top: 1px dashed #d0c4e1;
   padding-top:8px;
 }
 
 .past {
-  background-color: #d3d3d3;
-  color: rgb(40, 40, 40);
+  background-color: #dfdae4;
+  color: #3e324d;
 }
 
 .present {
-  background-color: #ff6961;
-  color: black;
+  background-color: #ce4949;
+  color: #f9f9f9;
 }
 
 .future {
-  background-color: #77dd77;
-  color: black;
+  background-color: #b4f7b6;
+  /* background-image: linear-gradient(to right, #846aa7 , #f9f9f9); */
+  color: #3e324d;
 }
 
 .saveBtn {
-  border-left: 1px solid black;
+  border-left: 1px solid #3e324d;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06AED5;
-  color: white;
+  /* background-color: #9a7db1; */
+  background: linear-gradient(to right, #9a7db1, #9a7db1, #72538c 75%, #72538c 75%);
+  color: #f9f9f9;
 }
 
 .saveBtn i:hover {
