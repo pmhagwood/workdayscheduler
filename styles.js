@@ -77,19 +77,12 @@ for (property in workHours) {
 $('button').click(function() {
     // get the hour text
     hourEntered = $(this).siblings('.hour').text();
-    // console.log("Hour entered is ", hourEntered);
     // get the text the user entered
     textEntered = $(this).siblings('textarea').val();
-    // console.log("text entered is ", textEntered);
     $(this).css("background", "#9ca2b9");
     $(this).append('<span class="savedtxt"> saved</span>');
     $(this).siblings('textarea').css('opacity', '0.8');
     $('.savedtxt').fadeOut(1000);
-    // setTimeout(function(){
-    //     // $('#savedtxt').remove();
-        
-        
-    //    }, 1000);
 
     // save the hour and the text the user entered
     saveSchedule(hourEntered, textEntered);
@@ -103,7 +96,6 @@ function initializeLocalStorage (){
 // send object to localStorage
 function saveToLocalStorage(obj) {
     localStorage.setItem('workdayTasks', JSON.stringify(obj));
-    // console.log('local storage now contains ', workdayTasks);
 }
 
 // function to save the schedule
@@ -114,7 +106,6 @@ function saveSchedule (hour, text){
 
     var workText = JSON.parse(localStorage.getItem('workdayTasks'));
     workText[hour] = text;
-    // console.log('workText is ', workText);
 
     saveToLocalStorage(workText);
 
@@ -129,8 +120,6 @@ function setCalendarTasks(obj) {
         console.log('The hour block is ', hourBlock);
         
        if(hourBlock === $(this).text()){
-      //obj.property - no space you can do .
-      //obj[property] - with space in the property
             console.log($(this).text(),obj,hourBlock)
             $('#text-block' + i++).val(obj[hourBlock]);
         }

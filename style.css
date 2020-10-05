@@ -35,7 +35,6 @@ textarea{
   background-color: transparent;
   color: #f9f9f9;
   border-radius: 0;
-  /* border-bottom: 10px solid black; */
 }
 
 .lead {
@@ -66,21 +65,13 @@ textarea{
   margin-left: -20px;
 }
 
-/* .time-block::first-letter {
-  font-size:3em;
-} */
-
-
 .row {
   white-space: pre-wrap;
   height: 90px;
-  /* border-top: 1px solid white;; */
   margin-top: 1px;
 }
 
 .hour {
-  /* background-color: #ffffff; */
-  /* color: #000000; */
   border-top: 1px dashed #d0c4e1;
   padding-top:8px;
 }
@@ -113,4 +104,52 @@ textarea{
 .saveBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
+}
+
+
+@media (max-width: 768px){
+  .display-3 {
+    font-size: 30px;
+  }
+  .lead {
+    font-size: smaller;
+  }
+  .container {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 2em;
+  }
+  .row {
+    height: 250px;
+  }
+  
+  .time-block{
+    font-size: .9em;
+    border-radius: 0px;
+    padding:0;
+    margin:0;
+    color:#846aa7;
+  }
+
+  .hour {
+    border-top: none;
+    padding:0;
+    margin:0;
+  }
+
+  textarea {
+    height: 150px;
+    padding-top:10px;
+    margin:0;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+  }
+  .saveBtn {
+    margin-top:-24px;
+    height: 40px;
+    border-top: 1px solid #3e324d;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
 }
