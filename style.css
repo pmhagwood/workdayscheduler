@@ -109,10 +109,12 @@ textarea{
 
 @media (max-width: 768px){
   .display-3 {
-    font-size: 30px;
+    font-size: 38px;
   }
   .lead {
     font-size: smaller;
+    margin: 0px 45px;
+    line-height: 1.2em;
   }
   .container {
     background-color: #f9f9f9;
